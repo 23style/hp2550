@@ -1,0 +1,13 @@
+# HP2550 気象データ受信システム Apache設定
+# Apache 2.2互換版
+
+# 基本的なファイル保護のみ（Apache 2.2記法）
+<Files ~ "\.log$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ~ "^config\.php$">
+    Order allow,deny
+    Deny from all
+</Files>

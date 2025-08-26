@@ -1,0 +1,9 @@
+[2025-08-23 04:45:51] ERROR [::1] Database connection failed: SQLSTATE[HY000] [1130] Host 'DESKTOP-0ID6BRD' is not allowed to connect to this MySQL server
+[2025-08-23 04:50:03] ERROR [::1] Database connection failed: SQLSTATE[HY000] [1130] Host 'DESKTOP-0ID6BRD' is not allowed to connect to this MySQL server
+[2025-08-23 04:50:16] ERROR [::1] Database connection failed: SQLSTATE[HY000] [1130] Host 'DESKTOP-0ID6BRD' is not allowed to connect to this MySQL server
+[2025-08-23 07:02:01] ERROR [unknown] Database connection failed: SQLSTATE[HY000] [1130] Host 'DESKTOP-0ID6BRD' is not allowed to connect to this MySQL server
+[2025-08-23 07:02:22] ERROR [unknown] Database connection failed: SQLSTATE[HY000] [1130] Host 'DESKTOP-0ID6BRD' is not allowed to connect to this MySQL server
+[2025-08-26 00:57:47] ERROR [unknown] Database connection failed: SQLSTATE[HY000] [2002] 対象のコンピューターによって拒否されたため、接続できませんでした。
+[2025-08-26 01:00:42] ERROR [unknown] Database connection failed: SQLSTATE[HY000] [2002] 対象のコンピューターによって拒否されたため、接続できませんでした。
+[2025-08-26 01:12:45] ERROR [unknown] Database connection failed: SQLSTATE[HY000] [2002] 対象のコンピューターによって拒否されたため、接続できませんでした。
+[2025-08-26 01:21:02] ERROR [unknown] Database connection failed: SQLSTATE[HY000] [2002] 対象のコンピューターによって拒否されたため、接続できませんでした。

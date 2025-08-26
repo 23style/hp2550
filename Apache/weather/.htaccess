@@ -1,0 +1,29 @@
+# HP2550 気象データ受信システム Apache設定
+# 2025-08-26
+
+# ▼ログファイルへの直接アクセス禁止
+<FilesMatch "\.log$">
+    Require all denied
+</FilesMatch>
+
+# ▼設定ファイルの保護（例: config.php）
+<Files "config.php">
+    Require all denied
+</Files>
+
+# ▼SQLファイルの保護
+<FilesMatch "\.sql$">
+    Require all denied
+</FilesMatch>
+
+# ▼バッチ/スクリプト類の保護（必要なら）
+<FilesMatch "\.(bat|cmd|ps1|sh)$">
+    Require all denied
+</FilesMatch>
+
+# ▼隠しファイル（ドットファイル）へのアクセス拒否
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# （必要に応じて追加の設定をここに）

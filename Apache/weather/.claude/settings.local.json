@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mysql:*)",
+      "Bash(php:*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:oss.ecowitt.net)",
+      "WebFetch(domain:www.manualslib.com)"
+    ],
+    "additionalDirectories": [
+      "C:\\",
+      "C:\\c\\myWork\\dev"
+    ]
+  }
+}

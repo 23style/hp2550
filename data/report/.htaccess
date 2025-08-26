@@ -1,0 +1,15 @@
+# HP2550用 .htaccess
+# このファイルを開発サーバーの /data/report/.htaccess に配置してください
+
+# DirectoryIndex設定
+DirectoryIndex index.php
+
+# リダイレクトルール
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # /data/report/ への POST要求を index.php にリダイレクト
+    RewriteCond %{REQUEST_METHOD} POST
+    RewriteCond %{REQUEST_URI} ^/data/report/$
+    RewriteRule ^$ index.php [L]
+</IfModule>
