@@ -1,24 +1,23 @@
 @echo off
-REM HP2550 Daily Weather Aggregation - Task Schedulerç”¨ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«
+REM HP2550 Daily Weather Aggregation - Task Scheduler—pƒoƒbƒ`ƒtƒ@ƒCƒ‹
 REM 
-REM å®Ÿè¡Œã‚¿ã‚¤ãƒŸãƒ³ã‚°: æ¯Žæ—¥ 00:05
-REM ã‚¿ã‚¹ã‚¯ã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ©ãƒ¼ã§ä»¥ä¸‹ã®è¨­å®šã§ç™»éŒ²:
-REM - ãƒˆãƒªã‚¬ãƒ¼: æ¯Žæ—¥ åˆå‰ 12:05
-REM - æ“ä½œ: ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ•ãƒ«ãƒ‘ã‚¹ã‚’æŒ‡å®š
-REM - é–‹å§‹å ´æ‰€: C:\myWork\dev\hp2550\weather\Database\
+REM ŽÀsƒ^ƒCƒ~ƒ“ƒO: –ˆ“ú 00:05
+REM ƒ^ƒXƒNƒXƒPƒWƒ…[ƒ‰[‚ÅˆÈ‰º‚ÌÝ’è‚Å“o˜^:
+REM - ƒgƒŠƒK[: –ˆ“ú Œß‘O 12:05
+REM - ‘€ì: ‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚Ìƒtƒ‹ƒpƒX‚ðŽw’è
 
 REM ==================================================
-REM è¨­å®š
+REM Ý’è
 REM ==================================================
 set SCRIPT_DIR=%~dp0
 set PHP_SCRIPT=%SCRIPT_DIR%daily_aggregation.php
 set LOG_FILE=%SCRIPT_DIR%daily_aggregation_batch.log
 
-REM ä½œæ¥­ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’å¤‰æ›´
+REM ì‹ÆƒfƒBƒŒƒNƒgƒŠ‚ð•ÏX
 cd /d "%SCRIPT_DIR%"
 
 REM ==================================================
-REM ãƒ­ã‚°é–‹å§‹
+REM ƒƒOŠJŽn
 REM ==================================================
 echo. >> "%LOG_FILE%"
 echo ================================================== >> "%LOG_FILE%"
@@ -28,15 +27,15 @@ echo Script Dir: %SCRIPT_DIR% >> "%LOG_FILE%"
 echo ================================================== >> "%LOG_FILE%"
 
 REM ==================================================
-REM PHPå®Ÿè¡Œ
+REM PHPŽÀs
 REM ==================================================
 echo Running daily aggregation script... >> "%LOG_FILE%"
 
-REM PHPã‚¹ã‚¯ãƒªãƒ—ãƒˆå®Ÿè¡Œï¼ˆå‡ºåŠ›ã‚’ãƒ­ã‚°ã«è¿½è¨˜ï¼‰
+REM PHPƒXƒNƒŠƒvƒgŽÀsio—Í‚ðƒƒO‚É’Ç‹Lj
 php "%PHP_SCRIPT%" >> "%LOG_FILE%" 2>&1
 
 REM ==================================================
-REM å®Ÿè¡Œçµæžœãƒã‚§ãƒƒã‚¯
+REM ŽÀsŒ‹‰Êƒ`ƒFƒbƒN
 REM ==================================================
 set PHP_EXIT_CODE=%ERRORLEVEL%
 
@@ -47,7 +46,7 @@ if %PHP_EXIT_CODE% equ 0 (
     echo Daily aggregation failed. Exit code: %PHP_EXIT_CODE% >> "%LOG_FILE%"
     echo ERROR: Daily aggregation failed at %DATE% %TIME%
     
-    REM ã‚¨ãƒ©ãƒ¼æ™‚ã¯30ç§’å¾…ã£ã¦ã‹ã‚‰çµ‚äº†ï¼ˆãƒ­ã‚°ç¢ºèªç”¨ï¼‰
+    REM ƒGƒ‰[Žž‚Í30•b‘Ò‚Á‚Ä‚©‚çI—¹iƒƒOŠm”F—pj
     timeout /t 30 /nobreak > nul
 )
 

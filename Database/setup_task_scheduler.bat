@@ -1,5 +1,6 @@
 @echo off
-REM „Çø„Çπ„ÇØ„Çπ„Ç±„Ç∏„É•„Éº„É©„ÉºÁôªÈå≤Áî®„Çª„ÉÉ„Éà„Ç¢„ÉÉ„Éó„Çπ„ÇØ„É™„Éó„Éà
+REM É^ÉXÉNÉXÉPÉWÉÖÅ[ÉâÅ[ìoò^ópÉZÉbÉgÉAÉbÉvÉXÉNÉäÉvÉg
+REM ä«óùé“å†å¿Ç≈é¿çsÇµÇƒÇ≠ÇæÇ≥Ç¢
 
 echo ===================================================
 echo HP2550 Daily Aggregation Task Scheduler Setup
@@ -15,7 +16,7 @@ echo Script Path: %SCRIPT_PATH%
 echo Working Directory: %WORKING_DIR%
 echo.
 
-REM Êó¢Â≠ò„Çø„Çπ„ÇØ„ÅÆÁ¢∫Ë™ç„ÉªÂâäÈô§
+REM ä˘ë∂É^ÉXÉNÇÃämîFÅEçÌèú
 echo Checking for existing task...
 schtasks /query /tn "%TASK_NAME%" >nul 2>&1
 if %ERRORLEVEL% equ 0 (
@@ -33,7 +34,7 @@ if %ERRORLEVEL% equ 0 (
 )
 echo.
 
-REM Êñ∞„Åó„ÅÑ„Çø„Çπ„ÇØ„ÅÆ‰ΩúÊàê
+REM êVÇµÇ¢É^ÉXÉNÇÃçÏê¨
 echo Creating new scheduled task...
 schtasks /create ^
     /tn "%TASK_NAME%" ^
@@ -47,7 +48,7 @@ schtasks /create ^
 
 if %ERRORLEVEL% equ 0 (
     echo.
-    echo ‚úÖ Task created successfully!
+    echo Task created successfully!
     echo.
     echo Task Details:
     echo   Name: %TASK_NAME%
@@ -56,7 +57,7 @@ if %ERRORLEVEL% equ 0 (
     echo   Priority: Highest
     echo.
     
-    REM „Çø„Çπ„ÇØË©≥Á¥∞Ë°®Á§∫
+    REM É^ÉXÉNè⁄ç◊ï\é¶
     echo Verifying task...
     schtasks /query /tn "%TASK_NAME%" /fo LIST /v
     
@@ -75,7 +76,7 @@ if %ERRORLEVEL% equ 0 (
     
 ) else (
     echo.
-    echo ‚ùå Failed to create task. Error code: %ERRORLEVEL%
+    echo Failed to create task. Error code: %ERRORLEVEL%
     echo.
     echo Please check:
     echo 1. Run this script as Administrator
